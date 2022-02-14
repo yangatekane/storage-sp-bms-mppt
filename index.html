@@ -33,16 +33,23 @@
 						</header>
 						<p>The Storage S/P BMS-MPPT is a 120 volts 600 amp-hour 18650 lithium-ion power pack with a novel series/parallel battery management system(BMS) with maximum power point tracking(MPPT) and load matching(LM). The series/parallel BMS-MPPT-LM design is inspired by how the wiring design of advanced field programmable logic array(FPGA) chip-set and hardware design systems such as LED arrays and seven segments is approached. The standard way of making the 18650 battery pack is basically focused on protecting the series connection with BMS, hence you going to get a 3s for 12 volts batteries and 7s for 24 volts. As it can be seen from the previous sentence , a series connection is a voltage multiply and hence parrallel is a current multiply. For instance, a 100 Ah battery will be a 15p. Going further, a 12 volt 100 Ah will have a 3s by 15p BMS. A 3s by 15p BMS will have a grid array wiring diagram when compared to a 3s BMS. Each element in the connection grid represent a single cell connection that is meant to draw power, charge the battery and monitor with analog digital converter. This type of wiring design ensures an optimize current performance when compared to 3s and 7s BMS that exists on the market.</p>
 						
-						<p>The drive for this wiring is controlled by 32-bit micro-controller that has enough pins to make a 33s by 88p for 120 volts 600 Ah. The 32- bt microcontroller has enough prossessing power to switch on and off each cell simutaniously while doing cell monitoring. The maximum power point tracking module uses xilinx versal fpga ( Field- programmable gate array) to implement swarm particle optimazation for both voltage and current approximated for each cell in a panel. The load matching module uses an 8-bit micro controller to implement a PID (proportional–integral–derivative) controller to match the load.</p>
+						<p>The drive for this wiring is controlled by 32-bit micro-controller that has enough pins to make a 33s by 88p for 120 volts 600 Ah. The 32- bt microcontroller has enough prossessing power to switch on and off each cell simutaniously while doing cell monitoring. The maximum power point tracking module uses xilinx versal fpga ( Field- programmable gate array) to implement swarm particle optimization for both voltage and current approximated for each cell in a panel. The load matching module uses an 8-bit micro controller to implement a PID (proportional–integral–derivative) controller to match the load.</p>
 						
 						<h2>Introduction</h2>
 						
-						<p>This innovation aims to solve the problem of optimizing the current performance of lithium-based battery packs while considering efficient load matching for existing 3s and 7s BMS-based lithium battery packs. The innovation uses a novel grid-based series/ parallel wiring connection array to draw power from the cell, charge the cell and monitor the cell with a 32-bit microcontroller. The innovation further uses particle swarm optimization to track the maximum point of the power produced by the panel while matching the load with PID controller.</p>
+						<p>This innovation aims to solve the problem of optimizing the current performance of lithium-based battery packs while considering efficient load matching for existing 3s and 7s BMS-based lithium battery packs. The innovation uses a novel grid-based series/ parallel wiring connection array to draw power from the cell, charge the cell and monitor the cell with a 32-bit micro-controller. The innovation further uses particle swarm optimization to track the maximum point of the power produced by the panel while matching the load with PID controller.</p>
 						
 						<h2>Storage s/p bms-mppt concept</h2>
 						
+						<p>To make the design of the model/concept easy to follow as shown in Figure 1, I decided to consider the use case of 3s/2p power storage pack. 3 series/2 parallel power storage pack has three logic units:</p>
+						<ul>
+						  <li>Balancing logic unit</li>
+						  <li>Protection logic unit</li>
+						  <li>Power point tracking logic unit</li>
+						</ul>
+						<p> These logic unit blocks create the core functionality of the storage s/p bms-mppt device. Overheat, over current, short circuit protection and charge balancing are the usual function of the battery management system(bms). BMS available in the market have three transistor switches connected across series connected cells. The design in Figure 1 has both three transistors connected in the series current path, and another three transistors on the parallel current paths.</p>
 						<a href="#" class="image fit thumb"><img src="images/fulls/cn01.jpg" alt="" /></a>
-						<p><strong>Figure 1.</strong> Storage s/p battery management system with maximum power point tracking Matlab simulation model</p>
+						<p><strong>Fig. 1.</strong> Storage s/p battery management system with maximum power point tracking Matlab simulation model</p>
 
 						
 					</section>
